@@ -281,3 +281,7 @@ body {
     height: 55px;
     width: 55px;
 }
+
+.typeahead__container.loading .typeahead__query::before {
+    border-color: rgba(0,0,0);
+}

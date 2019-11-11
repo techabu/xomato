@@ -79,7 +79,7 @@ $.typeahead({
                         q: "{{query}}",
                         cityId: sessionStorage.getItem("cityId"),
                         start: 0,
-                        count: 10
+                        count: 5
                     }
                 }
             }
