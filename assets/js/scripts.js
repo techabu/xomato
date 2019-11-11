@@ -1,4 +1,4 @@
-var apiUrl = "http://localhost:5000/api/1.0/"
+var apiUrl = "http://ec2-3-134-113-168.us-east-2.compute.amazonaws.com:5000/api/1.0/"
 var getCities = apiUrl+"city";
 var getRestaurants = apiUrl+"search";
 var cityId;
