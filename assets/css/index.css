@@ -1,0 +1,8 @@
+body {
+	background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url(../images/background3.jpg)no-repeat;
+	background-size: cover;
+}
+
+.search-container {
+	margin: 22em 0em 0em 0em;
+}

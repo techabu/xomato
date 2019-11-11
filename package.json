@@ -1,0 +1,16 @@
+{
+  "name": "xomato",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "jquery-typeahead": "^2.11.0",
+    "pure-css-loader": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

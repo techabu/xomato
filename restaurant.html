@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="node_modules/jquery-typeahead/dist/jquery.typeahead.min.css">
+        <link rel="stylesheet" href="node_modules/pure-css-loader/dist/css-loader.css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" media="all"/>
+
+        <!--Google Fonts-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <title>Xomato</title>
+    </head>
+    <body>
+        <div class="search-res">
+            <div class="container-fluid">
+                <div class="row pt-10">
+                    <div class="offset-2 col-3 p-10">
+                        <div class="typeahead__container s-bar">
+                            <div class="typeahead__field">
+                                <div class="typeahead__query">
+                                    <input type="text" class="location" name="location" placeholder="Location" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5 p-1">
+                        <div class="typeahead__container s-bar">
+                            <div class="typeahead__field">
+                                <div class="typeahead__query">
+                                    <input type="text" class="restaurant" name="search" placeholder="Search Restaurant" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="loader loader-default"></div>
+            <div class="card mt-3">
+              <div class="row no-gutters">
+                  <div class="col-md-3">
+                    <img src="" class="card-img img-thumbnail" id="res-img">
+                  </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <p class="card-text"><small class="text-muted text-uppercase">Order food online from</small></p>
+                    <h2 class="card-text font-weight-bolder" id="res-name" style="font-size: 24pt"></h2>
+                    <p class="card-text text-muted"><small id="res-loc"></small></p>
+                    <p class="card-text text-muted"></p>
+                  </div>
+                </div>
+                <div class="col-md-1">
+                    <div style="text-align: center;padding-top: 15px;">
+                        <span class="border" id="res-rating" style="padding: 5px"></span>
+                    </div>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                <div class="col-md-4 border-top">
+                    <div class="p-2">
+                        <p class="text-center"><small class="text-muted">Timing</small></p>
+                        <h3 class="font-weight-bolder text-center info-text" id="res-time"></h3>
+                    </div>
+                </div>
+                <div class="col-md-4 border-top border-right border-left">
+                    <div class="p-2">
+                        <p class="text-center"><small class="text-muted">Cuisines</small></p>
+                        <h3 class="font-weight-bolder text-center info-text" id="res-cuisines"></h3>
+                    </div>
+                </div>
+                <div class="col-md-4 border-top">
+                    <div class="p-2">
+                        <p class="text-center"><small class="text-muted">Cost For Two</small></p>
+                        <h3 class="font-weight-bolder text-center info-text" id="res-cost"></h3>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mt-3 border-warning">
+              <h5 class="card-header text-center bg-warning">Reviews</h5>
+              <div class="card-body" id="res-reviews">
+
+              </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="node_modules/jquery-typeahead/dist/jquery.typeahead.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+    </body>
+</html>
+
+<script>
+    $(document).ready(function(){
+        redirectPage = false;
+        loadRestaurant();
+    });
+</script>
+
+<style>
+    .search-res {
+        /* min-height:400px; */
+        background-size:cover;
+        background:linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)),url(assets/images/background3.jpg)no-repeat;
+    }
+    .pt-10{
+        padding-top: 13.5rem !important;
+    }
+    .info-text{
+        font-size: 12pt
+    }
+</style>
