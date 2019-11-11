@@ -1,4 +1,4 @@
-var apiUrl = "http://localhost:3001/api/1.0/"
+var apiUrl = "http://localhost:5000/api/1.0/"
 var getCities = apiUrl+"city";
 var getRestaurants = apiUrl+"search";
 var cityId;
